@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Page</title>
+
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Form Styling */
+        #registration-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #registration-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #registration-form label {
+            margin-bottom: 5px;
+        }
+
+        #registration-form input, #registration-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #registration-form button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #registration-form button:hover {
+            background-color: #218838;
+        }
+
+        /* List Styling */
+        #employee-list ol {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        #employee-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #employee-list li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        #employee-list li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table Styling */
+        #employee-details table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        #employee-details th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        #employee-details tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Embedded Map Styling */
+        #company-location {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Employee Registration</h1>
+
+    <!-- Employee Registration Form -->
+    <section id="registration-form">
+        <form id="employeeForm" action="#">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="HR">HR</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+            </select><br>
+
+            <label for="employeeID">Employee ID:</label>
+            <input type="number" id="employeeID" name="employeeID" required><br>
+
+            <label for="profilePic">Profile Picture URL:</label>
+            <input type="url" id="profilePic" name="profilePic"><br>
+
+            <button type="submit">Register Employee</button>
+        </form>
+    </section>
+
+    <h2>Employee List</h2>
+    <!-- Employee List Section -->
+    <section id="employee-list">
+        <ol id="listOfEmployees">
+            <li><a href="#">John Doe - johndoe@example.com</a></li>
+            <li><a href="#">Jane Smith - janesmith@example.com</a></li>
+        </ol>
+    </section>
+
+    <h2>Employee Details</h2>
+    <!-- Employee Details Table -->
+    <section id="employee-details">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Employee ID</th>
+                    <th>Department</th>
+                    <th>Profile Picture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123</td>
+                    <td>Engineering</td>
+                    <td><img src="https://via.placeholder.com/50" alt="John's Profile Picture" width="50"></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>124</td>
+                    <td>HR</td>
+                    <td><img src="https://via.placeholder.com/50" alt="Jane's Profile Picture" width="50"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>Company Location</h2>
+    <!-- Embedded Map Section -->
+    <section id="company-location">
+        <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_CODE"
+                width="600" height="450" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+</body>
+
+</html>
